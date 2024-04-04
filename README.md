@@ -11,6 +11,8 @@ git clone --recursive https://github.com/lorebianchi98/FG-OVD_CLIP_Evaluation.gi
 pip3 install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu118
 cd CLIP
 python setup.py install
+cd ..
+pip install -r requirements.txt
 ```
 **NOTE**: This project uses a custom version of CLIP because it allows us to extract all tokens from the visual and textual encoders, not just the CLS token.
 If your goal is to extract only the CLS token (as done in the standard usage of this repo), you can install the official version of CLIP from the [official CLIP repository](https://github.com/openai/CLIP).
