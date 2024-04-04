@@ -1,0 +1,4 @@
+mlp_dims: []
+no_act: True
+initial_weights: 'checkpoints/triplet_linear-mlp.pth'
+cosine: True

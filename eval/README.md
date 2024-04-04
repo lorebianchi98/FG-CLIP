@@ -1,0 +1,2 @@
+# Evaluation
+This folder contains two key components: a script designed to conduct tests on the trained architecture, and a notebook responsible for generating tables and plots utilized in the official paper. The results pertaining to the OWL detectors have been obtained through the reproduction of experiments outlined in the official (FG-OVD repository)[https://github.com/lorebianchi98/FG-OVD].

@@ -1,0 +1,5 @@
+mlp_dims: []
+no_act: True
+keep_embeds: [False, True] # position 0: Visual Embedding, position 1: Textual Embedding
+initial_weights: 'checkpoints/triplet_linear-mlp_te-freezed.pth'
+cosine: True

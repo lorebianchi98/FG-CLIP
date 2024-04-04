@@ -1,0 +1,11 @@
+lr: 0.00001
+ltype: 'triplet'
+margin: 0.05 
+max_violation: False
+fgovd: True
+pacco_validation_sets_dir: 'fg-ovd_feature_extraction/val_sets'
+num_epochs: 10
+batch_size: 256
+shuffle: True
+save_best_model: True
+# retrieval_evaluation_set: 'features/ViT-B-16/val.json'
