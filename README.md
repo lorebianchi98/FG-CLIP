@@ -1,4 +1,8 @@
 # FG-CLIP
+[![arXiv](https://img.shields.io/badge/arXiv-2404.03539-b31b1b.svg)](https://arxiv.org/abs/2404.03539) 
+
+Official repository of the paper **"Is CLIP the main roadblock for fine-grained open-world perception?"**.
+
 This repository contains the code to perform training and evaluation of CLIP on the object crop of the [FG-OVD](https://github.com/lorebianchi98/FG-OVD) training sets and benchmarks. 
 
 The `checkpoints` directory stores the parameters obtained from these trainings. To utilize these pre-trained CLIP projections which enhance CLIP's fine-grained understanding without repeating the training process, please refer to [Load weights](#load-weights). 
@@ -82,4 +86,18 @@ text_embeddings = torch.rand(2, 512)
 similarities = model(image_embeddings, text_embeddings)
 # in case you are using MLPs, you can also extract image and text embeddings repurposed
 repurposed_image_embeddings, repurposed_text_embeddings = model(image_embeddings, text_embeddings, ret_embeds=True)
+```
+
+
+# Reference
+If you found this code useful, please cite the following paper:
+```
+    @misc{bianchi2024clip,
+        title={Is CLIP the main roadblock for fine-grained open-world perception?}, 
+        author={Lorenzo Bianchi and Fabio Carrara and Nicola Messina and Fabrizio Falchi},
+        year={2024},
+        eprint={2404.03539},
+        archivePrefix={arXiv},
+        primaryClass={cs.CV}
+    }
 ```

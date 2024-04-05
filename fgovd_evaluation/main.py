@@ -5,7 +5,7 @@ def main():
     parser = argparse.ArgumentParser()
     parser.add_argument('--batch_size', type=int, default=256, help="Batch size")
     parser.add_argument('--model', type=str, default="ViT-B/16", help="CLIP model to use") # ViT-B/16, ViT-L/14
-    parser.add_argument('--gpu', type=int, default="3", help="GPU to use")
+    parser.add_argument('--gpu', type=int, default="0", help="GPU to use")
     parser.add_argument('--cross_attention', type=str, default=None, help="If setted, it applies cross-attention instead of a simple dot product. The value of this parameter is the path to the weight of the cross attention layer")
     
     args = parser.parse_args()

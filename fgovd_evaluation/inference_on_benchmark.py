@@ -256,14 +256,13 @@ def extract_scores_from_images(data, model, preprocess, coco_path, n_hardnegativ
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument('--dataset', type=str, required=True, help='Dataset to process')
-    parser.add_argument('--coco_path', type=str, default="/home/lorenzobianchi/raid/CVPR2024/OpenAssistant/PacoDatasetHandling/annotator/coco/", help='Dataset to process')
+    parser.add_argument('--coco_path', type=str, default="../coco/", help='Dataset to process')
     parser.add_argument('--out', type=str, required=True, help='Out path')
     parser.add_argument('--n_hardnegatives', type=int, default=10, help="Number of hardnegatives in each vocabulary")
     parser.add_argument('--batch_size', type=int, default=256, help="Batch size")
     parser.add_argument('--scale_factor', type=float, default=1.0, help="Set the percental dimension of the crop of the bounding box to process with CLIP")
     parser.add_argument('--model', type=str, default="ViT-B/16", help="CLIP model to use")
     parser.add_argument('--cross_attention', type=str, default=None, help="If setted, it applies cross-attention instead of a simple dot product. The value of this parameter is the path to the weight of the cross attention layer")
-    
     args = parser.parse_args()
     
     if os.path.splitext(args.dataset)[1] == '.json':
