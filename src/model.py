@@ -112,7 +112,7 @@ class MLPs(nn.Module):
                     act=act,
                     rescaling=config.get('rescaling', False),
                     sigmoid=config.get('sigmoid', True),
-                    cosine=config.get('sigmoid', False))
+                    cosine=config.get('cosine', False))
         if 'initial_weights' in config and config['initial_weights'] is not None:
             model.load_state_dict(torch.load(config['initial_weights'], 'cpu'))
         return model
