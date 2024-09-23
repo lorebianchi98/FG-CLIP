@@ -1,3 +1,0 @@
-mlp_dims: [512]
-initial_weights: 'checkpoints/triplet_non-linear-mlp.pth'
-cosine: True

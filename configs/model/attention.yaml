@@ -1,3 +1,0 @@
-num_heads: 64
-num_attention_layers: 1
-initial_weights: 'checkpoints/warmup_attention.pth'

@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="Is CLIP the main roadblock for fine-grained open-world perception?">
+  <meta name="keywords" content="CLIP, fine-grained understanding, open-world perception">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Is CLIP the main roadblock for fine-grained open-world perception?</title>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <!-- <link rel="icon" href="./static/images/icon.png"> -->
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+</head>
+<body>
+
+<!-- More Research -->
+  <nav class="navbar" role="navigation" aria-label="main navigation">
+    <div class="navbar-brand">
+      <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </a>
+    </div>
+    <div class="navbar-menu">
+      <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
+        
+        <!-- <a class="navbar-item" href="https://concept-fusion.github.io">
+        <span class="icon">
+            <i class="fas fa-home"></i>
+        </span>
+        </a> -->
+  
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link">
+            Related Research
+          </a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="https://lorebianchi98.github.io/FG-OVD/">
+              FG-OVD
+            </a>
+          </div>
+        </div>
+      </div>
+  
+    </div>
+  </nav>
+
+<!-- More Research
+<nav class="navbar" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+  <div class="navbar-menu">
+    <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
+      <a class="navbar-item" href="#">
+      <span class="icon">
+          <i class="fas fa-home"></i>
+      </span>
+      </a>
+      <div class="navbar-item has-dropdown is-hoverable">
+        <a class="navbar-link">
+          More Research
+        </a>
+        <div class="navbar-dropdown">
+          <a class="navbar-item" href="#">
+            Project 1
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>
+-->
+
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <header class="column has-text-centered">
+          <h1 class="title is-1 publication-title">
+            Is CLIP the main roadblock for fine-grained open-world perception?
+            <p class="title publication-title"></p>
+            <p class="is-size-4 publication-awards">CBMI 2024 Best Paper Award</p>
+          </h1>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              <a href="https://www.linkedin.com/in/lorenzo-bianchi-893bb225a/">Lorenzo Bianchi</a><sup>1,2</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://www.linkedin.com/in/fabio-carrara-b28a2b111//">Fabio Carrara</a><sup>1</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://www.linkedin.com/in/nicola-messina-a33848164/">Nicola Messina</a><sup>1</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://fabriziofalchi.it">Fabrizio Falchi</a><sup>1</sup>
+            </span>
+          </div>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block"><sup>1</sup><a href="https://www.isti.cnr.it/">ISTI CNR</a></span>
+            <span class="author-block"><sup>2</sup>University of Pisa</span>
+          </div>
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- PDF Link. -->
+              <span class="link-block">
+                <a href="https://arxiv.org/abs/2404.03539"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Paper</span>
+                </a>
+              </span>
+              <!-- <span class="link-block">
+                <a href="https://arxiv.org/abs/2311.17518"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span>
+                </a>
+              </span> -->
+              <!--
+              <span class="link-block">
+                <a href="https://cvpr.thecvf.com/media/PosterPDFs/CVPR%202024/29694.png?t=1717055323.7435858"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-image"></i>
+                  </span>
+                  <span>Poster</span>
+                </a>
+              </span>
+              -->
+              <!-- Video Link.
+              <span class="link-block">
+                <a href="https://www.youtube.com/watch?v="
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-youtube"></i>
+                  </span>
+                  <span>Video</span>
+                </a>
+              </span>
+              -->
+              <!-- Code Link. -->
+              <span class="link-block">
+                <a href="https://github.com/lorebianchi98/FG-CLIP"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code</span>
+                  </a>
+              </span>
+              <!-- Dataset Link. -->
+              <span class="link-block">
+                <a href="https://github.com/lorebianchi98/FG-OVD/tree/main/benchmarks"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="far fa-images"></i>
+                  </span>
+                  <span>Data</span>
+                  </a>
+              <!-- Video Link. 
+              
+              <span class="link-block">
+                <a href="https://www.youtube.com/watch?v=3AIbqptBhmo"
+                class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-youtube"></i>
+                  </span>
+                  <span>Video</span>
+                </a>
+              </span>
+            -->
+            </div>
+          </div>
+        </header>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Carousel.
+<section class="hero is-light is-small">
+  <div class="hero-body">
+    <div class="container">
+      <div id="results-carousel" class="carousel results-carousel">
+        <div class="item item-1"></div>
+        <div class="item item-2"></div>
+      </div>
+    </div>
+  </div>
+</section>
+-->
+
+<section class="section pt-0">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-full-width">
+        <!-- Teaser. -->
+        <div class="content has-text-justified">
+          <p>
+            Modern applications increasingly demand <strong>flexible</strong> computer vision models that adapt to novel concepts not encountered during training. This necessity is pivotal in emerging domains like extended reality, robotics, and autonomous driving, which require the ability to respond to open-world stimuli. A key ingredient is the ability to identify objects based on free-form textual queries defined at inference time - a task known as <strong>open-vocabulary object detection</strong>. 
+          </p>
+          <p>
+            Multimodal backbones like <strong>CLIP</strong>  are the main enabling technology for current open-world perception solutions. Despite performing well on generic queries, <strong>recent studies highlighted limitations on the fine-grained recognition capabilities in open-vocabulary settings</strong> - i.e., for distinguishing subtle object features like color, shape, and material. In this paper, we perform a detailed examination of these open-vocabulary object recognition limitations to find the root cause. We evaluate the performance of CLIP, the most commonly used vision-language backbone, against a fine-grained object-matching benchmark, revealing interesting analogies between the limitations of open-vocabulary object detectors and their backbones. Experiments suggest that <strong>the lack of fine-grained understanding is caused by the poor separability of object characteristics in the CLIP latent space</strong>. Therefore, we try to understand whether fine-grained knowledge is present in CLIP embeddings but not exploited at inference time due, for example, to the unsuitability of the cosine similarity matching function, which may discard important object characteristics. 
+          </p>
+          <p>
+            Our preliminary experiments show that <strong>simple CLIP latent-space re-projections help separate fine-grained concepts</strong>, paving the way towards the development of backbones inherently able to process fine-grained details.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--/ Abstract. -->
+  </div>
+</section>
+<!-- Examples -->
+
+<!-- Results -->
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">Research questions</h2>
+        <div class="content has-text-justified">
+          <p><i><strong>Q1.</strong> Are OVDs failing primarily due to CLIP, or does localization (bounding box prediction) also play a role?</i></p>
+          <p>We began our analysis by examining
+            the relationship between open-vocabulary object detectors
+            and their vision-language backbone, specifically focusing on
+            CLIP.</p>
+          <figure>
+            <img src="./static/images/clip_vs_owl.jpg" alt="CLIP vs. OWL-based detectors" class="teaser-image">
+          </figure>
+          <p> Our results suggest that <strong>localization is marginal in the
+            limitations observed in fine-grained open-vocabulary object
+            detection</strong>. This demonstrates that the primary problem lies in
+            the interaction between vision and language within the shared
+            latent space.</p>
+          <p><i><strong>Q2.</strong> If the issue is with CLIP, is it struggling to encode fine-grained information (from either the image or text), or is the image-text matching not functioning correctly?</i></p>
+          <p>Assuming that the fine-grained knowledge is present within the
+            CLIP latent space, <strong>we hypothesize that the matching scheme
+            used to compare the representations</strong>, i.e., the typical cosine
+            similarity, is insufficient to extract this specific information.
+            To explore this possibility, our strategy involves <strong>earning a
+            customized similarity function <i>S</i></strong>l, which takes as input
+            the two embeddings <i>v</i> and <i>t</i> obtained from the <strong>frozen</strong> visual
+            and textual encoders. By forcing <i>S</i>
+            to recognize nuanced object properties based only on the
+            embedded information, we can state that successful results
+            in this regard mean that the embeddings inherently encode
+            fine-grained knowledge.</p>
+            <figure>
+              <img src="./static/images/custom_matching.png" alt="Examples" class="teaser-image">
+            </figure>
+
+            <figure>
+              <img src="./static/images/results.png" alt="Examples" class="teaser-image">
+            </figure>
+            <p>These results show that we
+              can learn a more complex similarity matching between the
+              representations and that <strong>nuanced information is indeed present
+              in CLIP embeddings</strong>. While fine-grained information exists within
+              the CLIP latent space, <strong>the representation is heavily biased
+              towards coarse-grained concepts</strong>. This bias causes similar
+              concepts to be positioned too closely within the latent space,
+              making it difficult to detect nuanced differences using traditional cosine similarity</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- Concurrent Work.
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">Related Links</h2>
+        <div class="content has-text-justified">
+          <p></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+-->
+
+
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">BibTeX</h2>
+    <pre><code>    @misc{bianchi2024clip,
+      title={Is CLIP the main roadblock for fine-grained open-world perception?}, 
+      author={Lorenzo Bianchi and Fabio Carrara and Nicola Messina and Fabrizio Falchi},
+      year={2024},
+      eprint={2404.03539},
+      archivePrefix={arXiv},
+      primaryClass={cs.CV}
+  }</code></pre>
+  </div>
+</section>
+
+
+<section class="section" id="ack">
+  <div class="container is-max-desktop content">
+    <h2 class="title">Acknowledgements</h2>
+    <p>
+      <a href="https://www.sun-xr-project.eu/" target="_blank"><img src="./static/images/sun.png" alt="SUN Project Logo" width="200"></a>
+      This work has received financial support by the Horizon Europe Research & Innovation Programme under Grant agreement N. 101092612 (Social and hUman ceNtered XR - SUN project).
+    </p>
+  </div>
+</section>
+
+
+<footer class="footer">
+  <div class="container">
+    <div class="content has-text-centered">
+      <a class="icon-link" href="https://github.com/fabiocarrara" class="external-link" disabled>
+        <i class="fab fa-github"></i>
+      </a>
+    </div>
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          <p>
+            This website is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
+            Commons Attribution-ShareAlike 4.0 International License</a>.
+          </p>
+          <p>
+            This website is borrowed from <a
+              href="https://github.com/nerfies/nerfies.github.io">nerfies</a>.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
+
