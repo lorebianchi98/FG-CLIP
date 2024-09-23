@@ -6,6 +6,8 @@ Official repository of the paper **"Is CLIP the main roadblock for fine-grained 
 This repository contains the code to perform training and evaluation of CLIP on the object crop of the [FG-OVD](https://github.com/lorebianchi98/FG-OVD) training sets and benchmarks. 
 
 The `checkpoints` directory stores the parameters obtained from these trainings. To utilize these pre-trained CLIP projections which enhance CLIP's fine-grained understanding without repeating the training process, please refer to [Load weights](#load-weights). 
+# Updates
+- :fire: 09/2024: **"Is CLIP the main roadblock for fine-grained open-world perception?"** won the *Best Paper Award* at CBMI 2024!
 # Installation
 
 ```bash
@@ -21,8 +23,6 @@ pip install -r requirements.txt
 **NOTE**: This project uses a custom version of CLIP because it allows us to extract all tokens from the visual and textual encoders, not just the CLS token.
 If your goal is to extract only the CLS token (as done in the standard usage of this repo), you can install the official version of CLIP from the [official CLIP repository](https://github.com/openai/CLIP).
 
-## Updates
-- :fire: 09/2024: **"Is CLIP the main roadblock for fine-grained open-world perception?"** won the *Best Paper Award* at CBMI 2024!
 
 # Feature Extraction
 To accelerate the training process, we utilize pre-extracted CLIP features within this repository. Please adhere to the following guidelines for feature extraction.
