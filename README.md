@@ -13,7 +13,7 @@ The `checkpoints` directory stores the parameters obtained from these trainings.
 ```bash
 conda create --name clip python=3.9 -y
 conda activate clip
-git clone --recursive https://github.com/lorebianchi98/FG-OVD_CLIP_Evaluation.git
+git clone --recursive https://github.com/lorebianchi98/FG-CLIP.git
 pip3 install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu118
 cd CLIP
 python setup.py install
