@@ -4,14 +4,20 @@ This is the repository that contains source code for the [website](https://loreb
 
 If you find this work useful, please cite:
 ```
-@misc{bianchi2024clip,
-      title={Is CLIP the main roadblock for fine-grained open-world perception?}, 
-      author={Lorenzo Bianchi and Fabio Carrara and Nicola Messina and Fabrizio Falchi},
-      year={2024},
-      eprint={2404.03539},
-      archivePrefix={arXiv},
-      primaryClass={cs.CV}
-}
+@inproceedings{bianchi2024clip,
+  author       = {Lorenzo Bianchi and
+                 Fabio Carrara and
+                 Nicola Messina and
+                 Fabrizio Falchi},
+title        = {Is Clip the Main Roadblock for Fine-Grained Open-World Perception?},
+booktitle    = {21st International Conference on Content-Based Multimedia Indexing,
+                 {CBMI} 2024, Reykjavik, Iceland, September 18-20, 2024},
+pages        = {1--8},
+publisher    = {{IEEE}},
+year         = {2024},
+url          = {https://doi.org/10.1109/CBMI62980.2024.10859215},
+doi          = {10.1109/CBMI62980.2024.10859215}
+} 
 ```
 
 # Website License
